@@ -1,0 +1,114 @@
+/* General Styling for the POD Form */
+.pod-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f0f4f8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.pod-header {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.pod-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pod-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.pod-input,
+.pod-select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pod-input:focus,
+.pod-select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+.pod-button{
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+.pod-reset-button {
+  margin-top: 20px;
+  width: 100px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.pod-button {
+  background-color: #78ae27;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.pod-button:hover {
+  background-color: #78ae27;
+  transform: translateY(-2px);
+}
+
+.pod-reset-button {
+  background-color: #2d2524;
+  color: #fff;
+}
+
+.pod-reset-button:hover {
+  background-color: #131111;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .pod-container {
+    padding: 15px;
+    margin: 20px;
+    width: 90%;
+  }
+
+  .pod-header {
+    font-size: 24px;
+  }
+
+  .pod-input,
+  .pod-select {
+    font-size: 14px;
+  }
+
+  .pod-button,
+  .pod-reset-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
