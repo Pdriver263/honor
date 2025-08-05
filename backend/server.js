@@ -14,7 +14,7 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://mern:gpGPSjUAqIaazWFi@
 
 // Middleware
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+  origin: process.env.CORS_ORIGIN || "https://honor-drivers-projects-26b58ed7.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
