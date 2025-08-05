@@ -13,9 +13,22 @@ const PORT = process.env.PORT || 4001;
 const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://mern:gpGPSjUAqIaazWFi@cluster7.gynar.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=Cluster7";
 
 // Middleware
+const allowedOrigins = [
+  'https://honor-ten.vercel.app',
+  'https://honor-drivers-projects-26b58ed7.vercel.app',
+  'http://localhost:3000'
+];
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || "honor-ten.vercel.app",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
